@@ -21,26 +21,11 @@ Ce document sert de suivi pour le développement du projet "World Of Rim". Il d�
    - [x] Implémenter la communication en temps réel via WebSocket entre le mod et l'API.
    - [ ] Ajouter des tests unitaires pour valider la connexion WebSocket.
 
-2. **Lancement et configuration du Mod**
-   - [ ] Créer une popup au lancement du jeu pour demander les autorisations nécessaires.
-   - [ ] Charger la liste des viewers et les enregistrer en base de données.
-   - [ ] Générer des factions procédurales pour les viewers non enregistrés.
-   - [ ] Ajouter des options de configuration pour le mod dans le jeu.
-
-3. **Gestion des parties**
-   - [ ] Implémenter la logique pour vider et recharger la base de données lors de la génération d'une nouvelle partie.
-   - [ ] Ajouter des tests pour valider cette fonctionnalité.
-
-4. **Interactions en jeu**
-   - [ ] Permettre aux viewers de demander leur apparition en jeu.
-   - [ ] Gérer les files d'attente pour intégrer les viewers dans le monde.
-   - [ ] Connecter l'inventaire et l'apparence des pions à l'extension Twitch via WebSocket.
-
 ### Développement de l'API
 
 1. **Connexion WebSocket**
-   - [ ] Implémenter la communication en temps réel via WebSocket.
-   - [ ] Ajouter des tests unitaires pour valider la connexion WebSocket.
+   - [x] Implémenter la communication en temps réel via WebSocket.
+   - [x] Ajouter des tests unitaires pour valider la connexion WebSocket.
 
 2. **API REST**
    - [ ] Créer une API REST avec TypeORM et MySQL8.

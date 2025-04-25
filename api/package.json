@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test:ws": "bun run test-ws.js"
   },
   "dependencies": {
     "ws": "^8.15.1"

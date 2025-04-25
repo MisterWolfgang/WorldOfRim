@@ -10,6 +10,7 @@ namespace WorldOfRimMod
     {
         private ClientWebSocket _client;
         private Uri _serverUri;
+        private CancellationTokenSource _cts = new CancellationTokenSource();
 
         public WebSocketClient(string serverUrl)
         {
@@ -20,9 +21,35 @@ namespace WorldOfRimMod
         public async Task ConnectAsync()
         {
             await _client.ConnectAsync(_serverUri, CancellationToken.None);
+            _ = ReceiveLoop();
         }
 
         public bool IsConnected => _client.State == WebSocketState.Open;
+
+        public async Task SendAsync(string message)
+        {
+            if (!IsConnected) return;
+            var buffer = System.Text.Encoding.UTF8.GetBytes(message);
+            await _client.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+        }
+
+        private async Task ReceiveLoop()
+        {
+            var buffer = new byte[1024];
+            while (_client.State == WebSocketState.Open)
+            {
+                var result = await _client.ReceiveAsync(new ArraySegment<byte>(buffer), _cts.Token);
+                if (result.MessageType == WebSocketMessageType.Close)
+                {
+                    await _client.CloseAsync(WebSocketCloseStatus.NormalClosure, string.Empty, CancellationToken.None);
+                }
+                else
+                {
+                    var msg = System.Text.Encoding.UTF8.GetString(buffer, 0, result.Count);
+                    Log.Message($"[WorldOfRim] Message reçu de l'API : {msg}");
+                }
+            }
+        }
     }
 
     public class Program
@@ -49,7 +76,10 @@ namespace WorldOfRimMod
                 {
                     await wsClient.ConnectAsync();
                     if (wsClient.IsConnected)
+                    {
                         Log.Message("[WorldOfRim] Connecté à l'API WebSocket !");
+                        await wsClient.SendAsync("Coucou depuis RimWorld !");
+                    }
                     else
                         Log.Error("[WorldOfRim] Échec de la connexion WebSocket.");
                 }

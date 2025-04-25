@@ -7,6 +7,9 @@ World Of Rim est un projet colossal qui intègre le jeu RimWorld avec Twitch via
 ## Fonctionnalités
 
 - **Mod** : Développé en C# avec .NET Framework 4.7.2, utilisant Harmony Library pour une intégration fluide avec RimWorld.
+  - Connexion WebSocket automatique à l'API au chargement du mod.
+  - Envoi d'un message de test à l'API lors de la connexion.
+  - Affichage dans le log du jeu de tous les messages reçus de l'API.
 - **API** : Communication en temps réel via WebSocket, API REST avec TypeORM, et MySQL8.
 - **Extension Twitch** : Développée avec Expo.js (React Native) pour les plateformes web et mobiles, avec gestion d'inventaire, personnalisation de personnages, et une boutique basée sur les Bits.
 
