@@ -1,0 +1,10 @@
+{
+  "name": "world-of-rim-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:mod": "dotnet build ./mod/WorldOfRimMod.csproj -c Release && steam steam://rungameid/294100"
+  },
+  "description": "Scripts racine pour orchestrer le build du mod RimWorld.",
+  "author": "World Of Rim Team"
+}
