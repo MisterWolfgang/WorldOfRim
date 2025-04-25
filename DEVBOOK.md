@@ -8,7 +8,7 @@ Ce document sert de suivi pour le développement du projet "World Of Rim". Il d�
 
 ### Initialisation
 
-- [ ] Initialiser un dépôt Git pour le projet.
+- [x] Initialiser un dépôt Git pour le projet.
 - [ ] Configurer le fichier `.gitignore` pour exclure les fichiers inutiles.
 - [ ] Créer la structure de base du projet avec les dossiers nécessaires.
 - [ ] Ajouter un fichier `README.md` décrivant le projet.
