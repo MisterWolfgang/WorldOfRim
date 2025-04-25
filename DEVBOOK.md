@@ -9,9 +9,9 @@ Ce document sert de suivi pour le développement du projet "World Of Rim". Il d�
 ### Initialisation
 
 - [x] Initialiser un dépôt Git pour le projet.
-- [ ] Configurer le fichier `.gitignore` pour exclure les fichiers inutiles.
-- [ ] Créer la structure de base du projet avec les dossiers nécessaires.
-- [ ] Ajouter un fichier `README.md` décrivant le projet.
+- [x] Configurer le fichier `.gitignore` pour exclure les fichiers inutiles.
+- [x] Créer la structure de base du projet avec les dossiers nécessaires.
+- [x] Ajouter un fichier `README.md` décrivant le projet.
 - [ ] Configurer un environnement de développement pour C#, TypeScript, et React Native.
 - [ ] Installer les dépendances nécessaires (Harmony Library, TypeORM, Expo.js, etc.).
 
