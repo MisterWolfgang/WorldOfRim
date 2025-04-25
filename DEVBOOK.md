@@ -19,7 +19,6 @@ Ce document sert de suivi pour le développement du projet "World Of Rim". Il d�
 
 1. **Connexion WebSocket**
    - [x] Implémenter la communication en temps réel via WebSocket entre le mod et l'API.
-   - [ ] Ajouter des tests unitaires pour valider la connexion WebSocket.
 
 ### Développement de l'API
 
@@ -28,7 +27,7 @@ Ce document sert de suivi pour le développement du projet "World Of Rim". Il d�
    - [x] Ajouter des tests unitaires pour valider la connexion WebSocket.
 
 2. **API REST**
-   - [ ] Créer une API REST avec TypeORM et MySQL8.
+   - [x] Créer une API REST avec TypeORM et MySQL8 (CRUD User, Pawn, Faction, PawnUser).
    - [ ] Ajouter des tests unitaires pour chaque endpoint.
 
 ### Développement de l'extension Twitch

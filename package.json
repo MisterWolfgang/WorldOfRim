@@ -8,5 +8,11 @@
     "build:mod": "dotnet build ./mod/WorldOfRimMod.csproj -c Release && pwsh -Command \"New-Item -ItemType Directory -Path 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/WorldOfRim/Assemblies' -Force | Out-Null; Copy-Item -Path './mod/bin/Release/net472/WorldOfRimMod.dll' -Destination 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/WorldOfRim/Assemblies/WorldOfRimMod.dll' -Force\""
   },
   "description": "Scripts racine pour orchestrer le build du mod RimWorld.",
-  "author": "World Of Rim Team"
+  "author": "World Of Rim Team",
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/typeorm": "^11.0.0",
+    "mysql2": "^3.14.0",
+    "typeorm": "^0.3.22"
+  }
 }
