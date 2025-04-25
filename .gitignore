@@ -20,3 +20,20 @@ Thumbs.db
 # Ignore IDE-specific files
 .vscode/
 .idea/
+
+# Ignore TypeScript build outputs
+build/
+dist/
+
+# Ignore React Native build outputs
+android/
+ios/
+expo/
+*.keystore
+*.jks
+
+# Ignore cache and debug files
+npm-debug.log
+yarn-error.log
+.expo/
+.parcel-cache/
