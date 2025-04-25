@@ -1,0 +1,22 @@
+# Ignore build outputs
+bin/
+obj/
+*.dll
+*.exe
+
+# Ignore node_modules
+node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
