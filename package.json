@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:mod": "dotnet build ./mod/WorldOfRimMod.csproj -c Release && steam steam://rungameid/294100"
+    "start": "bun run build:mod && bun run start:game",
+    "start:game": "steam steam://rungameid/294100",
+    "build:mod": "dotnet build ./mod/WorldOfRimMod.csproj -c Release && pwsh -Command \"New-Item -ItemType Directory -Path 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/WorldOfRim/Assemblies' -Force | Out-Null; Copy-Item -Path './mod/bin/Release/net472/WorldOfRimMod.dll' -Destination 'C:/Program Files (x86)/Steam/steamapps/common/RimWorld/Mods/WorldOfRim/Assemblies/WorldOfRimMod.dll' -Force\""
   },
   "description": "Scripts racine pour orchestrer le build du mod RimWorld.",
   "author": "World Of Rim Team"

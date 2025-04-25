@@ -1,0 +1,10 @@
+<ModMetaData>
+  <name>World Of Rim</name>
+  <author>World Of Rim Team</author>
+  <description>Intégration Twitch et API pour RimWorld.</description>
+  <packageId>worldofrim.mod</packageId>
+  <supportedVersions>
+    <li>1.4</li>
+    <li>1.5</li>
+  </supportedVersions>
+</ModMetaData>

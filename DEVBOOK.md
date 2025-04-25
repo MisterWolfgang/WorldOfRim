@@ -18,7 +18,7 @@ Ce document sert de suivi pour le développement du projet "World Of Rim". Il d�
 ### Développement du Mod
 
 1. **Connexion WebSocket**
-   - [ ] Implémenter la communication en temps réel via WebSocket entre le mod et l'API.
+   - [x] Implémenter la communication en temps réel via WebSocket entre le mod et l'API.
    - [ ] Ajouter des tests unitaires pour valider la connexion WebSocket.
 
 2. **Lancement et configuration du Mod**
